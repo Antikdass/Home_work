@@ -24,16 +24,16 @@ prompt("Тобі " + ua);
 
 let all = hello + nami + com + ua + number1 + number2 + number3 + number4 + number5 + number6 + number7 + boolTrue + boolFalse;
 
-let k = prompt(number1);
-let k1 = prompt(number2);
-let k2 = prompt(number3);
+let k = prompt("Введіть число");
+let k1 = prompt("Введіть число");
+let k2 = prompt("Введіть число");
 console.log(+k);
 console.log(+k1);
 console.log(+k2);
 
-let p3 = prompt(number1);
-let p4 = prompt(number2);
-let p5 = prompt(number3);
+let p3 = prompt("Введіть дробове число");
+let p4 = prompt("Введіть дробове число");
+let p5 = prompt("Введіть дробове число");
 
 let pars = parseInt(p3);
 let pars2 = parseInt(p4);
@@ -52,8 +52,8 @@ let rou3 = Math.round(flot3);
 let result1 = rou + rou2 + rou3;
 console.log("Заокруглені ", result1);
 
-let p = prompt(number4);
-let p2 = prompt(number7);
+let p = prompt("Введіть ціле число");
+let p2 = prompt("Введіть ціле число");
 
 let pow = Math.pow(p, p2);
 console.log("Піднесення до степеня ", pow);
