@@ -193,7 +193,6 @@ let citiesWithId = [
 ];
 //З'єднати в один об'єкт користувача та місто з відповідними "id" та "user_id" . Записати цей об'єкт в новий масив
 let arrayNew = [];
-let object = {};
 for (let user of usersWithId){
     for (let cities of citiesWithId){
         if (user.id===cities.user_id) {
@@ -204,3 +203,20 @@ for (let user of usersWithId){
     }
 }
 console.log(arrayNew)
+
+
+
+
+
+
+function car(carNumber, ind) {
+    let indef = document.getElementsByTagName(ind)
+    
+        let divForCar = document.createElement('div')
+        divForCar.textContent = carNumber
+        for (let i of indef) {
+            i.appendChild(divForCar)
+        }
+    
+}
+car(['aaaa', 'bbbb', 'ccc'], 'p')
