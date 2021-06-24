@@ -140,40 +140,66 @@ const users = [{
 
 console.log('______________________________________________')
 //a) відсортувати його за  віком (зростання , а потім окремо спадання)
-let userSort = users.sort((a, b) => a.age - b.age)
+let sortik = users.map(value =>{
+    let sorta = {...value}
+    return sorta;
+});
+let userSort = sortik.sort((a, b) => a.age - b.age)
 console.log(userSort)
 
 //СПАДАННЯ
-let userSort2 = users.sort((a, b) => b.age - a.age)
+let sortik2 = users.map(value =>{
+    let sorta = {...value}
+    return sorta;
+});
+let userSort2 = sortik2.sort((a, b) => b.age - a.age)
 console.log(userSort2)
 
 //b) відсортувати його за кількістю знаків в імені  (зростання , а потім окремо спадання)
-
-let userSort3 = users.sort((a, b) => a.name.length - b.name.length)
+let sortik3 = users.map(value =>{
+    let sorta = {...value}
+    return sorta;
+});
+let userSort3 = sortik3.sort((a, b) => a.name.length - b.name.length)
 console.log(userSort3)
 //СПАДАННЯ
-let userSort4 = users.sort((a, b) => b.name.length - a.name.length)
+let sortik4 = users.map(value =>{
+    let sorta = {...value}
+    return sorta;
+});
+let userSort4 = sortik4.sort((a, b) => b.name.length - a.name.length)
 console.log(userSort4)
 
 //  c) пройтись по ньому та додати кожному юзеру поле id - яке характеризує унікальний індентифікатор (По якому принципу його створювати - ваше рішення),
 //    та зберегти це в новий масив (первинний масив залишиться без змін)
-let newArrays = [];
-let userMap = users.map((value, index) => {
-    newArrays.push(value)
-    return value.id = index + 1;
+let newArrays = users.map(value =>{
+    let avik = {...value}
+    return avik;
+});
+newArrays.forEach((value, index) => {
+    value.id = index + 1;
+    return value;
 })
 console.log(newArrays)
 
 //d) відсортувати його за індентифікатором
-let sortirovka = newArrays.sort((a, b) => b.id - a.id)
+let sortac = newArrays.map(value =>{
+    let avik = {...value}
+    return avik;
+});
+let sortirovka = sortac.sort((a, b) =>  b.id - a.id  )
 console.log(sortirovka)
 
 //e) Всі хто одружений мають попасти у новий масив та отрмати квартиру (reduce)
-let newNew = [];
-let redusic = users.reduce((value, newValue)=>{
-   if (newValue.isMarried) {
-       newNew.push(newValue)
-       return newValue.flat ='New hous'
-   }return 0;
-},{})
-console.log(newNew)
+let redic = users.map(value =>{
+    let avik = {...value}
+    return avik;
+});
+let redusic = redic.reduce((acc, newValue) => {
+    if (newValue.isMarried) {
+        newValue.flat = true;
+        acc.push(newValue)
+    }
+    return acc;
+}, [])
+console.log(redusic)
